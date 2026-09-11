@@ -33,7 +33,7 @@ Install the dependencies with `pip install -r requirements.txt`, then import the
 function and call it:
 
 ```python
-from <module> import analizza_titolo
+from estimation_function_1 import analizza_titolo
 
 res = analizza_titolo("HOOD", "2021-07-29", seed=0)
 print(res["delta_bic"])   # positive means the two-state model is preferred
