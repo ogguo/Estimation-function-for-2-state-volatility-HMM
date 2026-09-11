@@ -13,15 +13,15 @@ Given a ticker and an IPO date, it:
 
 - downloads daily prices with `yfinance` and keeps the first 180 trading days
 - builds an annualized rolling realized volatility series (standard deviation of
-  log returns over a 10-day window, scaled by sqrt(252))
+  log returns over a 10 day window, scaled by sqrt(252))
 - fits a two-state Gaussian HMM to that series, refitting under 30 different
-  seeds and keeping the highest-likelihood fit
+  seeds and keeping the highest likelihood fit
 - labels the state with the higher mean as the high-volatility one, so the two
   regimes mean the same thing across listings
 - computes the transition matrix, expected regime durations, the stationary and
   empirical share of high-volatility days, and the smoothed probability of the
   high-volatility state on each date
-- fits a single-Gaussian benchmark and compares the two by AIC and BIC
+- fits a single Gaussian benchmark and compares the two by AIC and BIC
 
 It returns those quantities as a dictionary and writes a two-panel figure,
 `<TICKER>_hmm.png`: the volatility series with high-volatility periods shaded,
