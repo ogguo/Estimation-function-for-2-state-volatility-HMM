@@ -11,11 +11,11 @@ from hmmlearn.hmm import GaussianHMM
 from scipy.stats import norm
 
 
-def analizza_titolo(TICKER, DATA_IPO, seed):
+def analizza_titolo(TICKER, DATA_IPO):
     N_GIORNI = 180
     FINESTRA = 10
     GIORNI_ANNO = 252
-    SEED = seed
+    
 
     # Dati e rolling volatility
     start = pd.Timestamp(DATA_IPO)
